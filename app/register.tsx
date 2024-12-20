@@ -11,6 +11,7 @@ export default function Register() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View></View>
       <View style={styles.numpad}>
         {numbers.map((row, rowIndex) => (
           <View key={rowIndex} style={styles.row}>
