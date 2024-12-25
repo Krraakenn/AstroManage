@@ -18,7 +18,7 @@ export default function StartPage() {
           <Pressable style={styles.button} onPress={() => router.replace("/register")}>
             <Text style={styles.buttonText}>Register</Text>
           </Pressable>
-          <Pressable style={styles.button}>
+          <Pressable style={styles.button} onPress={() => router.replace("/login")}>
             <Text style={styles.buttonText}>Login</Text>
           </Pressable>
         </View>

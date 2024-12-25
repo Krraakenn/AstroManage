@@ -1,18 +1,24 @@
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+import { getUserData, UserData } from "../../utils/stores/userStore";
+import { useEffect, useState } from "react";
 
 export default function Page() {
+  const [user, setUser] = useState<UserData | null>(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await getUserData();
+      setUser(user);
+    };
+
+    fetchUser();
+  }, [])
+
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
-        <Link href="/profile" style={styles.button}>
-          Go to About screen
-        </Link>
-        <Link href="/startpage" style={styles.button}>
-          start page
-        </Link>
+        <Text style={styles.title}>Hello {user?.username}</Text>
       </View>
     </View>
   );
