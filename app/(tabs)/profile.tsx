@@ -39,31 +39,41 @@ export default function Profile() {
               <Pressable style={styles.settingbutton}>
                 <Text>Your profile</Text>
               </Pressable>
-              <Pressable>
+              <Pressable style={styles.settingbutton}>
                 <Text>Modify password</Text>
               </Pressable>
             </View>
           </View>
-          <View>
-            <Text>Notifs</Text>
-            <Pressable>
-              <Text>Push notifications</Text>
-            </Pressable>
-            <Pressable>
-              <Text>Mail notitifications</Text>
-            </Pressable>
+          <View style={styles.setting}>
+            <Text style={styles.settingtitle}>Notifs</Text>
+            <View style={styles.settingbuttons}>
+              <Pressable style={styles.settingbutton}>
+                <Text>Push notifications</Text>
+              </Pressable>
+              <Pressable style={styles.settingbutton}>
+                <Text>Mail notitifications</Text>
+              </Pressable>
+            </View>
           </View>
-          <View>
-            <Text>Divers</Text>
-            <Pressable>
-              <Text>Language</Text>
-            </Pressable>
-            <Pressable>
-              <Text>Report a bug</Text>
-            </Pressable>
-            <Pressable>
-              <Text>Contact us</Text>
-            </Pressable>
+          <View style={styles.setting}>
+            <Text style={styles.settingtitle}>Divers</Text>
+            <View style={styles.settingbuttons}>
+              <Pressable style={styles.settingbutton}>
+                <Text>Language</Text>
+              </Pressable>
+              <Pressable style={styles.settingbutton}>
+                <Text>Report a bug</Text>
+              </Pressable>
+              <Pressable style={styles.settingbutton}>
+                <Text>Contact us</Text>
+              </Pressable>
+              <Pressable style={styles.settingbutton}>
+                <Text>Legals</Text>
+              </Pressable>
+              <Pressable style={styles.settingbutton}>
+                <Text>Infos</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </View>
@@ -84,6 +94,7 @@ const styles = StyleSheet.create({
     // borderColor: "black",
   },
   settingsbrowser: {
+    padding: 10,
   },
   setting: {
     gap: 10,
@@ -92,15 +103,25 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textDecorationLine: "underline",
+    textDecorationColor: "#FECC2E",
   },
   settingbuttons: {
-    gap: 10
+    gap: 10,
+    marginBottom: 10,
   },
   settingbutton: {
     padding: 10,
-    borderRadius: 30,
+    borderRadius: 5,
     borderWidth: 1,
-    borderColor: "black",
+    borderColor: "#FECC2E",
+    backgroundColor: "white",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
   },
   ppandusername: {
     alignItems: "center",

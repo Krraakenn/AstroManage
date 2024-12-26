@@ -12,6 +12,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { url } from "../config";
 import { storeUserData } from "../utils/stores/userStore";
 import { useRouter } from "expo-router";
+import { addProject, getProjects, ProjectData, storeProjects } from "../utils/stores/projectStore";
 
 export default function Register() {
   const router = useRouter();
